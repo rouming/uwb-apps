@@ -44,7 +44,7 @@ Prerequisites: You should follow the generic tutorials at http://mynewt.apache.o
 2. Download the UWB apps repository.
 
 ```no-highlight
-    git clone git@github.com:Decawave/uwb-apps.git
+    git clone git@github.com:rouming/uwb-apps.git
     cd uwb-apps
 ```
 
@@ -77,20 +77,22 @@ git apply ../decawave-uwb-core/patches/apache-mynewt-core/mynewt_1_7_0_*
 cd -
 ```
 
-4. To erase the default flash image that shipped with the DWM1001.
-
-```no-highlight
-$ JLinkExe -device nRF52 -speed 4000 -if SWD
-J-Link>erase
-J-Link>exit
-$
-```
-
-or if you have nrfjprog ([Nordic Cmd Tools](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download)) installed:
-
-```
-    $ nrfjprog -f NRF52 -e
-```
+### I use openocd, not the jlink ####
+###
+### 4. To erase the default flash image that shipped with the DWM1001.
+###
+### ```no-highlight
+### $ JLinkExe -device nRF52 -speed 4000 -if SWD
+### J-Link>erase
+### J-Link>exit
+### $
+### ```
+###
+### or if you have nrfjprog ([Nordic Cmd Tools](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download)) installed:
+###
+### ```
+###     $ nrfjprog -f NRF52 -e
+### ```
 
 
 5. Build the new bootloader applicaiton for the DWM1001 target.
