@@ -95,6 +95,10 @@ syscfg.defs:
         description: 'Whether to use WCS or not, setting this to 0 removes the WCS pkg'
         value: 1
 
+    UWB_TRANSPORT_ROLE:
+        description: 'Off = 0, Sender = 1, Listener = 2'
+        value: 0
+
 syscfg.vals.PANMASTER_ISSUER:
     UWBCFG_DEF_ROLE: '"0x7"'
 
